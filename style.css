@@ -1,0 +1,1314 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&family=Dancing+Script:wght@700&display=swap');
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+html{
+    scroll-behavior:smooth;
+}
+
+body{
+
+    background:
+    linear-gradient(
+    -45deg,
+    #ffd6e7,
+    #f8c8dc,
+    #f6d1ff,
+    #ffd6e0
+);
+
+background-size:400% 400%;
+
+animation:dreamyBG 15s ease infinite;
+}
+
+
+
+/* =========================
+   NAVBAR
+========================= */
+
+nav{
+
+    position:fixed;
+
+    top:20px;
+
+    left:50%;
+
+    transform:translateX(-50%);
+
+    z-index:999;
+
+    display:flex;
+
+    gap:20px;
+
+    padding:15px 25px;
+
+    border-radius:30px;
+
+    background:rgba(255,255,255,0.2);
+
+    backdrop-filter:blur(10px);
+}
+
+nav a{
+
+    text-decoration:none;
+
+    color:white;
+
+    font-weight:bold;
+
+    transition:0.3s;
+}
+
+nav a:hover{
+
+    color:#ff4f81;
+}
+
+
+
+/* =========================
+   OPENING SCREEN
+========================= */
+
+#openingScreen{
+
+    position:fixed;
+
+    top:0;
+    left:0;
+
+    width:100%;
+    height:100%;
+
+    background:#f6caca;
+
+    display:flex;
+
+    justify-content:center;
+    align-items:center;
+
+    flex-direction:column;
+
+    z-index:9999;
+
+    transition:1s;
+}
+
+.openingTitle{
+
+    font-family:'Dancing Script',cursive;
+
+    font-size:60px;
+
+    margin-bottom:20px;
+}
+
+
+
+/* =========================
+   CONTAINER
+========================= */
+
+.container{
+
+    width:100%;
+
+    max-width:1200px;
+
+    margin:auto;
+
+    padding:120px 20px 50px;
+
+    display:flex;
+
+    flex-direction:column;
+
+    align-items:center;
+
+    gap:80px;
+}
+
+
+
+/* =========================
+   HOME
+========================= */
+
+#home{
+
+    width:100%;
+
+    display:flex;
+
+    flex-direction:column;
+
+    align-items:center;
+
+    text-align:center;
+}
+
+#home h1{
+
+    font-family:'Dancing Script',cursive;
+
+    font-size:70px;
+
+    margin-bottom:30px;
+
+    text-shadow:0 5px 10px rgba(0,0,0,0.2);
+}
+
+
+
+/* =========================
+   SLIDESHOW
+========================= */
+
+.slideshow{
+
+    width:100%;
+
+    max-width:500px;
+
+    aspect-ratio:16/9;
+
+    position:relative;
+
+    overflow:hidden;
+
+    border-radius:30px;
+
+    margin:0 auto 30px;
+
+    background:rgba(255,255,255,0.1);
+
+    backdrop-filter:blur(10px);
+
+    border:3px solid rgba(255,255,255,0.2);
+
+    box-shadow:0 10px 30px rgba(0,0,0,0.25);
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+}
+
+.slide{
+
+    position:absolute;
+
+    inset:0;
+
+    width:100%;
+
+    height:100%;
+
+    object-fit:cover;
+
+    opacity:0;
+
+    transition:1s ease-in-out;
+
+    transform:scale(1);
+
+    transition:
+
+    1s ease-in-out,
+
+    transform 2s ease;
+}
+
+.slide.active{
+
+    opacity:1;
+     z-index:1;
+}
+
+
+
+/* =========================
+   MESSAGE
+========================= */
+
+.message{
+
+    max-width:700px;
+
+    text-align:center;
+
+    font-size:20px;
+
+    line-height:2;
+
+    margin-bottom:20px;
+}
+
+
+
+/* =========================
+   BUTTON
+========================= */
+
+button{
+
+    border:none;
+
+    padding:15px 25px;
+
+    border-radius:30px;
+
+    cursor:pointer;
+
+    background:white;
+
+    color:#ff4f81;
+
+    font-weight:bold;
+
+    transition:0.3s;
+
+    margin-top:10px;
+}
+
+button:hover{
+
+    transform:scale(1.05);
+}
+
+
+
+/* =========================
+   TIMER
+========================= */
+
+.timer{
+
+    padding:20px;
+
+    border-radius:25px;
+
+    background:rgba(255,255,255,0.2);
+
+    backdrop-filter:blur(10px);
+
+    text-align:center;
+}
+
+#loveTimer{
+
+    margin-top:10px;
+
+    font-size:24px;
+
+    font-weight:bold;
+}
+
+
+
+/* =========================
+   GALLERY
+========================= */
+
+section{
+
+    width:100%;
+
+    text-align:center;
+}
+
+section h2{
+
+    font-size:45px;
+
+    margin-bottom:40px;
+}
+
+.gallery-grid{
+
+    display:grid;
+
+    grid-template-columns:
+    repeat(auto-fit,minmax(250px,1fr));
+
+    gap:20px;
+}
+
+.gallery-grid img{
+
+    width:100%;
+
+    height:300px;
+
+    object-fit:cover;
+
+    border-radius:25px;
+
+    transition:0.4s;
+}
+
+.gallery-grid img:hover{
+
+    transform:
+    scale(1.05)
+    translateY(-5px);
+
+    box-shadow:
+    0 10px 25px rgba(255,255,255,0.3);
+
+}
+
+
+
+/* =========================
+   LETTER BOX
+========================= */
+
+.letter-box{
+
+    max-width:800px;
+
+    margin:auto;
+
+    padding:40px;
+
+    border-radius:30px;
+
+    background:rgba(255,255,255,0.2);
+
+    backdrop-filter:blur(10px);
+
+    line-height:2;
+
+    font-size:20px;
+}
+
+
+
+/* =========================
+   POPUP
+========================= */
+
+#popup{
+
+    position:fixed;
+
+    inset:0;
+
+    background:
+    rgba(0,0,0,0.65);
+
+    backdrop-filter:blur(10px);
+
+    display:none;
+
+    justify-content:center;
+
+    align-items:center;
+
+    padding:20px;
+
+    z-index:99999;
+
+    animation:fadePopup 0.5s ease;
+}
+
+.popup-content{
+
+    width:100%;
+
+    max-width:700px;
+
+    max-height:85vh;
+
+    overflow-y:auto;
+
+    padding:40px;
+
+    border-radius:35px;
+
+    background:
+    rgba(255,255,255,0.15);
+
+    backdrop-filter:blur(20px);
+
+    border:
+    1px solid rgba(255,255,255,0.2);
+
+    box-shadow:
+    0 10px 40px rgba(0,0,0,0.25);
+
+    color:white;
+
+    animation:popupScale 0.5s ease;
+}
+
+.popup-content p{
+
+    .popup-content p{
+
+    color:white;
+
+    line-height:2.2;
+
+    font-size:18px;
+
+    white-space:pre-line;
+
+    text-align:left;
+
+    margin-top:25px;
+}
+}
+.popup-content h2{
+
+    font-family:
+    'Dancing Script',
+    cursive;
+
+    font-size:45px;
+
+    text-align:center;
+
+    color:white;
+
+    margin-bottom:20px;
+
+    text-shadow:
+    0 0 15px rgba(255,255,255,0.3);
+}
+
+/* =========================
+   HEARTS
+========================= */
+
+.hearts::before,
+.hearts::after{
+
+    content:"❤️";
+
+    position:fixed;
+
+    font-size:30px;
+
+    animation:float 6s linear infinite;
+}
+
+.hearts::before{
+
+    left:10%;
+}
+
+.hearts::after{
+
+    right:10%;
+
+    animation-delay:3s;
+}
+
+@keyframes float{
+
+    0%{
+        transform:translateY(100vh);
+        opacity:0;
+    }
+
+    50%{
+        opacity:1;
+    }
+
+    100%{
+        transform:translateY(-100vh);
+        opacity:0;
+    }
+}
+
+
+
+/* =========================
+   DARK MODE
+========================= */
+
+#darkModeBtn{
+
+    position:fixed;
+
+    right:20px;
+
+    top:20px;
+
+    z-index:9999;
+}
+
+.dark-mode{
+    background-size:400% 400%;
+
+    animation:dreamyBG 15s ease infinite;
+    background:#1f1f1f;
+}
+
+
+
+/* =========================
+   MOBILE
+========================= */
+
+@media(max-width:768px){
+
+    #home h1{
+
+        font-size:50px;
+    }
+
+    .slideshow{
+
+        height:300px;
+    }
+
+    section h2{
+
+        font-size:35px;
+    }
+}
+.slide{
+
+    animation:zoomEffect 8s linear infinite;
+}
+
+@keyframes zoomEffect{
+
+    from{
+        transform:scale(1);
+    }
+
+    to{
+        transform:scale(1.08);
+    }
+}
+.slideshow:hover .slide.active{
+
+    transform:scale(1.03);
+}
+#loveTimer{
+
+    margin-top:15px;
+
+    font-size:28px;
+
+    font-weight:bold;
+
+    color:#fff;
+
+    text-shadow:0 0 10px rgba(255,255,255,0.5);
+
+    line-height:1.8;
+}
+/* =========================
+   CHIBI FLOATING
+========================= */
+
+.chibi-container{
+
+    position:fixed;
+
+    inset:0;
+
+    pointer-events:none;
+
+    overflow:hidden;
+
+    z-index:1;
+}
+
+.chibi{
+
+    position:absolute;
+
+    font-size:40px;
+
+    animation:floatChibi linear infinite;
+
+    opacity:0.9;
+}
+
+
+
+/* Posisi & Durasi */
+
+.bunny{
+
+    left:10%;
+
+    animation-duration:12s;
+}
+
+.cat{
+
+    left:30%;
+
+    animation-duration:15s;
+
+    animation-delay:2s;
+}
+
+.bear{
+
+    left:60%;
+
+    animation-duration:18s;
+
+    animation-delay:1s;
+}
+
+.chick{
+
+    left:80%;
+
+    animation-duration:14s;
+
+    animation-delay:4s;
+}
+
+
+
+/* Animasi */
+
+@keyframes floatChibi{
+
+    0%{
+
+        transform:
+        translateY(110vh)
+        rotate(0deg);
+
+        opacity:0;
+    }
+
+    10%{
+        opacity:1;
+    }
+
+    50%{
+
+        transform:
+        translateY(50vh)
+        rotate(10deg);
+    }
+
+    100%{
+
+        transform:
+        translateY(-120vh)
+        rotate(-10deg);
+
+        opacity:0;
+    }
+}
+@keyframes dreamyBG{
+
+    0%{
+        background-position:0% 50%;
+    }
+
+    50%{
+        background-position:100% 50%;
+    }
+
+    100%{
+        background-position:0% 50%;
+    }
+}
+/* =========================
+   SAKURA EFFECT
+========================= */
+
+.sakura-container{
+
+    position:fixed;
+
+    inset:0;
+
+    overflow:hidden;
+
+    pointer-events:none;
+
+    z-index:0;
+}
+
+.sakura-container span{
+
+    position:absolute;
+
+    top:-10%;
+
+    font-size:25px;
+
+    animation:sakuraFall linear infinite;
+
+    opacity:0.8;
+}
+
+
+
+/* Posisi */
+
+.sakura-container span:nth-child(1){
+
+    left:10%;
+
+    animation-duration:10s;
+}
+
+.sakura-container span:nth-child(2){
+
+    left:20%;
+
+    animation-duration:14s;
+
+    animation-delay:2s;
+}
+
+.sakura-container span:nth-child(3){
+
+    left:35%;
+
+    animation-duration:12s;
+
+    animation-delay:1s;
+}
+
+.sakura-container span:nth-child(4){
+
+    left:50%;
+
+    animation-duration:18s;
+}
+
+.sakura-container span:nth-child(5){
+
+    left:65%;
+
+    animation-duration:13s;
+
+    animation-delay:3s;
+}
+
+.sakura-container span:nth-child(6){
+
+    left:80%;
+
+    animation-duration:15s;
+}
+
+.sakura-container span:nth-child(7){
+
+    left:90%;
+
+    animation-duration:11s;
+
+    animation-delay:2s;
+}
+
+
+
+/* Animasi */
+
+@keyframes sakuraFall{
+
+    0%{
+
+        transform:
+        translateY(-10vh)
+        rotate(0deg);
+
+        opacity:0;
+    }
+
+    10%{
+        opacity:1;
+    }
+
+    100%{
+
+        transform:
+        translateY(110vh)
+        rotate(360deg);
+
+        opacity:0;
+    }
+}
+/* Gabungkan kode melayang tadi ke dalam class baru */
+.premium-glow {
+    backdrop-filter: blur(20px);
+    background: rgba(255, 255, 255, 0.08);
+    border: 1px solid rgba(255, 255, 255, 0.15);
+    border-radius: 40px;
+    text-shadow: 
+        0 0 10px rgba(255, 255, 255, 0.5),
+        0 0 20px rgba(255, 255, 255, 0.3),
+        0 0 40px rgba(255, 255, 255, 0.2);
+}
+
+/* =========================
+   MUSIC PLAYER
+========================= */
+
+/* =========================
+   PREMIUM MUSIC PLAYER
+========================= */
+
+.music-player{
+
+    width:100%;
+
+    max-width:420px;
+
+    padding:25px;
+
+    border-radius:30px;
+
+    background:
+    rgba(255,255,255,0.12);
+
+    backdrop-filter:blur(20px);
+
+    border:
+    1px solid rgba(255,255,255,0.2);
+
+    box-shadow:
+    0 8px 30px rgba(0,0,0,0.15);
+
+    text-align:center;
+
+    transition:0.4s;
+}
+
+.music-player:hover{
+
+    transform:translateY(-3px);
+
+    box-shadow:
+    0 15px 40px rgba(255,105,180,0.2);
+}
+
+
+
+/* TITLE */
+
+#songTitle{
+
+    font-size:24px;
+
+    font-weight:600;
+
+    color:white;
+
+    margin-bottom:25px;
+
+    text-shadow:
+    0 0 10px rgba(255,255,255,0.3);
+}
+
+
+
+/* CONTROLS */
+
+.music-controls{
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    gap:20px;
+}
+
+
+
+/* BUTTON */
+
+.music-controls button{
+
+    width:55px;
+
+    height:55px;
+
+    border:none;
+
+    border-radius:50%;
+
+    background:
+    rgba(255,255,255,0.15);
+
+    backdrop-filter:blur(10px);
+
+    color:white;
+
+    font-size:20px;
+
+    cursor:pointer;
+
+    transition:0.3s;
+
+    box-shadow:
+    0 5px 15px rgba(0,0,0,0.1);
+}
+
+
+
+/* PLAY BUTTON */
+
+#musicBtn{
+
+    width:70px;
+
+    height:70px;
+
+    font-size:26px;
+
+    background:
+    linear-gradient(
+    135deg,
+    #ff7eb3,
+    #ff4f81
+    );
+
+    box-shadow:
+    0 0 20px rgba(255,79,129,0.4);
+}
+
+
+
+/* HOVER */
+
+.music-controls button:hover{
+
+    transform:
+    scale(1.1)
+    translateY(-2px);
+
+    background:
+    rgba(255,255,255,0.25);
+}
+
+
+
+/* PLAY BUTTON HOVER */
+
+#musicBtn:hover{
+
+    box-shadow:
+    0 0 30px rgba(255,79,129,0.6);
+}
+
+.music-icon{
+
+    display:inline-block;
+
+    animation:spin 4s linear infinite;
+}
+
+@keyframes spin{
+
+    from{
+        transform:rotate(0deg);
+    }
+
+    to{
+        transform:rotate(360deg);
+    }
+}
+@keyframes popupScale{
+
+    from{
+
+        transform:
+        scale(0.8);
+
+        opacity:0;
+    }
+
+    to{
+
+        transform:
+        scale(1);
+
+        opacity:1;
+    }
+}
+
+
+
+@keyframes fadePopup{
+
+    from{
+        opacity:0;
+    }
+
+    to{
+        opacity:1;
+    }
+}
+/* =========================
+   DARK MODE IMPROVEMENT
+========================= */
+
+.dark-mode{
+
+    background:
+    linear-gradient(
+    -45deg,
+    #0f0f1a,
+    #161625,
+    #1b1b35,
+    #101020
+    );
+
+    background-size:400% 400%;
+
+    animation:dreamyBG 15s ease infinite;
+
+    color:white;
+}
+
+
+
+/* Semua text utama */
+
+.dark-mode h1,
+.dark-mode h2,
+.dark-mode h3,
+.dark-mode p,
+.dark-mode nav a{
+
+    color:white;
+}
+
+
+
+/* Timer */
+
+.dark-mode .timer{
+
+    background:
+    rgba(255,255,255,0.08);
+
+    border:
+    1px solid rgba(255,255,255,0.1);
+}
+
+
+
+/* Music Player */
+
+.dark-mode .music-player{
+
+    background:
+    rgba(255,255,255,0.08);
+
+    border:
+    1px solid rgba(255,255,255,0.1);
+}
+
+
+
+/* Popup */
+
+.dark-mode .popup-content{
+
+    background:
+    rgba(30,30,30,0.85);
+
+    color:white;
+}
+
+
+
+/* Letter Text */
+
+.dark-mode .popup-content p{
+
+    color:white;
+}
+
+
+
+/* Gallery Hover */
+
+.dark-mode .gallery-grid img:hover{
+
+    box-shadow:
+    0 10px 30px rgba(255,255,255,0.15);
+}
+
+
+
+/* Navbar */
+
+.dark-mode nav{
+
+    background:
+    rgba(255,255,255,0.05);
+
+    border:
+    1px solid rgba(255,255,255,0.08);
+}
+
+
+
+/* Letter Box */
+
+.dark-mode .letter-box{
+
+    background:
+    rgba(255,255,255,0.06);
+
+    color:white;
+}
+/* =========================
+   FALLING STARS
+========================= */
+
+.stars-container{
+
+    position:fixed;
+
+    inset:0;
+
+    overflow:hidden;
+
+    pointer-events:none;
+
+    z-index:0;
+
+    display:none;
+}
+
+
+
+/* AKTIF SAAT DARK MODE */
+
+.dark-mode .stars-container{
+
+    display:block;
+}
+
+
+
+/* MATIKAN SAKURA SAAT DARK */
+
+.dark-mode .sakura-container{
+
+    display:none;
+}
+
+
+
+.stars-container span{
+
+    position:absolute;
+
+    top:-10%;
+
+    font-size:22px;
+
+    opacity:0.8;
+
+    animation:fallStars linear infinite;
+}
+
+
+
+/* Posisi */
+
+.stars-container span:nth-child(1){
+
+    left:10%;
+
+    animation-duration:9s;
+}
+
+.stars-container span:nth-child(2){
+
+    left:25%;
+
+    animation-duration:13s;
+
+    animation-delay:2s;
+}
+
+.stars-container span:nth-child(3){
+
+    left:40%;
+
+    animation-duration:11s;
+
+    animation-delay:1s;
+}
+
+.stars-container span:nth-child(4){
+
+    left:60%;
+
+    animation-duration:15s;
+}
+
+.stars-container span:nth-child(5){
+
+    left:75%;
+
+    animation-duration:12s;
+
+    animation-delay:3s;
+}
+
+.stars-container span:nth-child(6){
+
+    left:90%;
+
+    animation-duration:10s;
+
+    animation-delay:2s;
+}
+
+
+
+/* Animasi */
+
+@keyframes fallStars{
+
+    0%{
+
+        transform:
+        translateY(-10vh)
+        translateX(0)
+        rotate(0deg);
+
+        opacity:0;
+    }
+
+    10%{
+        opacity:1;
+    }
+
+    100%{
+
+        transform:
+        translateY(110vh)
+        translateX(-50px)
+        rotate(360deg);
+
+        opacity:0;
+    }
+}
