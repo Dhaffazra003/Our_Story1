@@ -1,3 +1,77 @@
+/* =========================
+   VIDEO BACKGROUND
+========================= */
+
+#bgVideo{
+
+    position:fixed;
+
+    top:0;
+    left:0;
+
+    width:100%;
+
+    height:100%;
+
+    object-fit:cover;
+
+    z-index:-2;
+
+    filter:
+    brightness(0.55)
+    saturate(1.1);
+
+    animation:
+    videoFade 30s linear infinite;
+}
+
+
+
+/* Overlay pink dreamy */
+
+body::before{
+
+    content:"";
+
+    position:fixed;
+
+    inset:0;
+
+    background:
+    rgba(255,192,203,0.25);
+
+    z-index:-1;
+
+    pointer-events:none;
+}
+
+
+
+/* Fade ambience */
+
+@keyframes videoFade{
+
+    0%{
+
+        filter:
+        brightness(0.5)
+        saturate(1.1);
+    }
+
+    50%{
+
+        filter:
+        brightness(0.7)
+        saturate(1.3);
+    }
+
+    100%{
+
+        filter:
+        brightness(0.5)
+        saturate(1.1);
+    }
+}
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&family=Dancing+Script:wght@700&display=swap');
 
 *{
@@ -455,8 +529,6 @@ section h2{
 
 .popup-content p{
 
-    .popup-content p{
-
     color:white;
 
     line-height:2.2;
@@ -468,7 +540,6 @@ section h2{
     text-align:left;
 
     margin-top:25px;
-}
 }
 .popup-content h2{
 
@@ -907,13 +978,19 @@ section h2{
 
 #songTitle{
 
-    font-size:24px;
+    font-size:20px;
 
     font-weight:600;
 
     color:white;
 
     margin-bottom:25px;
+
+    text-align:center;
+
+    line-height:1.5;
+
+    max-width:90%;
 
     text-shadow:
     0 0 10px rgba(255,255,255,0.3);
@@ -931,7 +1008,11 @@ section h2{
 
     align-items:center;
 
-    gap:20px;
+    gap:35px;
+
+    width:100%;
+
+    margin-top:20px;
 }
 
 
@@ -1119,6 +1200,11 @@ section h2{
 
     border:
     1px solid rgba(255,255,255,0.1);
+    display:flex;
+
+    flex-direction:column;
+
+    align-items:center;
 }
 
 

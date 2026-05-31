@@ -102,12 +102,12 @@ const songs = [
 },
 
 {
-    title:"Masa Ini,nanti dan masa indah lainnya 🌸",
+    title:"Masa Ini, Nanti dan Selamanya 🌸",
     src:"music/music2.mp3"
 },
 
 {
-    title:"Everything u are ✨",
+    title:"Everything U Are ✨",
     src:"music/music3.mp3"
 }
 
@@ -269,7 +269,7 @@ aku mungkin belum jadi cowo yang paling peka sekarang, masih banyak kurangnya ju
 
 tapi aku beneran mau kok untuk belajar lagi pelan-pelan supaya bisa lebih ngerti kamu, lebih nemenin kamu kedepannya sayang, dan lebih bisa jagain perasaan kamu.
 
-karena buat aku sekarang, yang paling penting itu kamu tetap ngerasa disayang dan ga sendirian waktu sama aku sayangku.
+karena buat aku sekarang, yang paling penting itu kamu tetap ngerasa disayang dan ga sendirian waktu sama aku sayangku. I LOVE U SAYANG KU 
 
 Dhaffazra ✨`;
 
@@ -326,15 +326,54 @@ document
 
 
 /* =========================
-   DARK MODE
+   DARK MODE + VIDEO SWITCH
 ========================= */
 
-document
-.getElementById("darkModeBtn")
-.addEventListener("click",()=>{
+const darkModeBtn =
+document.getElementById("darkModeBtn");
+
+const bgVideo =
+document.getElementById("bgVideo");
+
+const videoSource =
+document.getElementById("videoSource");
+
+let darkMode = false;
+
+
+
+darkModeBtn.addEventListener(
+"click",
+
+()=>{
 
     document.body
     .classList.toggle("dark-mode");
+
+    darkMode = !darkMode;
+
+
+
+    /* SWITCH VIDEO */
+
+    if(darkMode){
+
+        videoSource.src =
+        "videos/video2.mp4";
+
+    }else{
+
+        videoSource.src =
+        "videos/video1.mp4";
+    }
+
+
+
+    /* RELOAD VIDEO */
+
+    bgVideo.load();
+
+    bgVideo.play();
 });
 /* =========================
    OPENING SCREEN
