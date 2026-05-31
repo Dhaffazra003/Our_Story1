@@ -329,6 +329,7 @@ document
    DARK MODE + VIDEO SWITCH
 ========================= */
 
+
 const darkModeBtn =
 document.getElementById("darkModeBtn");
 
@@ -337,6 +338,41 @@ document.getElementById("bgVideo");
 
 const videoSource =
 document.getElementById("videoSource");
+
+
+
+/* SLIDESHOW */
+
+const slide1 =
+document.getElementById("slide1");
+
+const slide2 =
+document.getElementById("slide2");
+
+const slide3 =
+document.getElementById("slide3");
+
+const slide4 =
+document.getElementById("slide4");
+
+
+
+/* GALLERY */
+
+const gallery1 =
+document.getElementById("gallery1");
+
+const gallery2 =
+document.getElementById("gallery2");
+
+const gallery3 =
+document.getElementById("gallery3");
+
+const gallery4 =
+document.getElementById("gallery4");
+
+const originalMessage =
+specialMessage.innerHTML;
 
 let darkMode = false;
 
@@ -354,17 +390,96 @@ darkModeBtn.addEventListener(
 
 
 
-    /* SWITCH VIDEO */
+    /* =========================
+       DARK MODE
+    ========================= */
 
     if(darkMode){
+
+        /* VIDEO */
 
         videoSource.src =
         "videos/video2.mp4";
 
+        /* SPECIAL MESSAGE */
+
+            specialMessage.innerHTML =
+
+            `Aku mencintai kamu sayang bukan karna kamu sempurna, tapi karena
+            bersama kamu aku bisa melupakan arti dari kesendirian dan kamu
+            bukan hanya alasan aku selalu tersenyum tetapi juga alasan aku percaya kalau cinta
+            itu nyata adanya. ✨🌙`;
+
+        /* SLIDESHOW */
+
+        slide1.src =
+        "images/dark1.jpg";
+
+        slide2.src =
+        "images/dark2.jpg";
+
+        slide3.src =
+        "images/dark3.jpg";
+
+        slide4.src =
+        "images/dark4.jpg";
+
+
+
+        /* GALLERY */
+
+        gallery1.src =
+        "images/dark1.jpg";
+
+        gallery2.src =
+        "images/dark2.jpg";
+
+        gallery3.src =
+        "images/dark3.jpg";
+
+        gallery4.src =
+        "images/dark4.jpg";
+
+
+
     }else{
+        specialMessage.innerHTML =
+        originalMessage;
+
+        /* VIDEO */
 
         videoSource.src =
         "videos/video1.mp4";
+
+        /* SLIDESHOW */
+
+        slide1.src =
+        "images/foto1.jpg";
+
+        slide2.src =
+        "images/foto2.jpg";
+
+        slide3.src =
+        "images/foto3.jpg";
+
+        slide4.src =
+        "images/foto4.jpg";
+
+
+
+        /* GALLERY */
+
+        gallery1.src =
+        "images/foto1.jpg";
+
+        gallery2.src =
+        "images/foto2.jpg";
+
+        gallery3.src =
+        "images/foto3.jpg";
+
+        gallery4.src =
+        "images/foto4.jpg";
     }
 
 
@@ -375,6 +490,7 @@ darkModeBtn.addEventListener(
 
     bgVideo.play();
 });
+
 /* =========================
    OPENING SCREEN
 ========================= */
